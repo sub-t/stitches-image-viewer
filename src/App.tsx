@@ -21,9 +21,9 @@ const App = () => {
         }}
       >
         <Heading variant="violet">Image Viewer</Heading>
-        <Grid columns={{ '@initial': '1', '@md': '2', '@lg': '3' }} gap="4">
+        <Grid as="ul" columns={{ '@initial': '1', '@md': '2', '@lg': '3' }} gap="4">
           {animalList.map(({ id, src, name }) => (
-            <Card key={id} src={src} name={name} />
+            <Card key={id} as="li" src={src} name={name} />
           ))}
         </Grid>
       </Grid>

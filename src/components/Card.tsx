@@ -6,10 +6,12 @@ import { Text } from './Text';
 type Props = {
   src: string;
   name: string;
-};
+  as: string;
+} & React.ComponentPropsWithRef<typeof Box>;
 
-export const Card: React.FC<Props> = ({ src, name }) => (
+export const Card: React.FC<Props> = ({ src, name, ...props }) => (
   <Box
+    {...props}
     css={{
       userSelect: 'none',
       overflow: 'hidden',
