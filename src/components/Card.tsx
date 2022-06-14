@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, ImageContainer } from './Image';
-import { Box } from './Layout';
+import { Image } from './Image';
+import { Box, HStack } from './Layout';
+import { Text } from './Text';
 
 type Props = {
   src: string;
@@ -8,21 +9,27 @@ type Props = {
 };
 
 export const Card: React.FC<Props> = ({ src, name }) => (
-  <Box css={{ borderRadius: 6, boxShadow: '0 8px 16px 4px $colors$mauveA2' }}>
-    <ImageContainer css={{ h: 200 }}>
-      <Image src={src} />
-    </ImageContainer>
-    <Box
+  <Box
+    css={{
+      userSelect: 'none',
+      overflow: 'hidden',
+      borderRadius: 4,
+      backgroundColor: '$mauve1',
+      '&:hover': {
+        boxShadow: '0 8px 16px 4px $colors$mauveA3',
+      },
+    }}
+  >
+    <Image src={src} />
+    <HStack
+      justify="center"
       css={{
         p: '$3',
-        textAlign: 'center',
-        fontSize: '$5',
-        fontWeight: 900,
-        textTransform: 'uppercase',
-        color: '$mauve11'
       }}
     >
-      {name}
-    </Box>
+      <Text size="4" css={{ fontWeight: 900, textTransform: 'uppercase' }}>
+        {name}
+      </Text>
+    </HStack>
   </Box>
 );

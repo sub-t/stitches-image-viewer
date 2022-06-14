@@ -7,6 +7,7 @@ export const globalStyles = globalCss({
     p: 0,
     listStyle: 'none',
     textDecoration: 'none',
+    transitionDuration: '0.4s',
   },
   body: {
     backgroundColor: '$background',

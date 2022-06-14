@@ -30,7 +30,7 @@ export const {
       ...mauve,
       ...mauveA,
 
-      background: mauve.mauve1,
+      background: mauve.mauve2,
     },
     space: {
       1: '4px',
@@ -115,6 +115,6 @@ export const darkTheme = createTheme('dark', {
     ...mauveDark,
     ...mauveDarkA,
 
-    background: mauveDark.mauve1,
+    background: mauveDark.mauve2,
   },
 });

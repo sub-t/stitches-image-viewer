@@ -1,20 +1,18 @@
-import { styled } from 'stitches.config';
+import { css } from 'stitches.config';
 
-export const Box = styled('div', {});
-
-export const Grid = styled(Box, {
-  display: 'grid',
+export const flexStyles = css({
+  display: 'flex',
 
   variants: {
     align: {
       start: {
-        alignItems: 'start',
+        alignItems: 'flex-start',
       },
       center: {
         alignItems: 'center',
       },
       end: {
-        alignItems: 'end',
+        alignItems: 'flex-end',
       },
       stretch: {
         alignItems: 'stretch',
@@ -25,30 +23,19 @@ export const Grid = styled(Box, {
     },
     justify: {
       start: {
-        justifyContent: 'start',
+        justifyContent: 'flex-start',
       },
       center: {
         justifyContent: 'center',
       },
       end: {
-        justifyContent: 'end',
+        justifyContent: 'flex-end',
       },
       between: {
         justifyContent: 'space-between',
       },
-    },
-    columns: {
-      1: {
-        gridTemplateColumns: 'repeat(1, 1fr)',
-      },
-      2: {
-        gridTemplateColumns: 'repeat(2, 1fr)',
-      },
-      3: {
-        gridTemplateColumns: 'repeat(3, 1fr)',
-      },
-      4: {
-        gridTemplateColumns: 'repeat(4, 1fr)',
+      around: {
+        justifyContent: 'space-around',
       },
     },
     gap: {
