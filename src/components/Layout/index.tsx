@@ -3,12 +3,9 @@ import { flexStyles } from './styles';
 
 export const Box = styled('div', {});
 
-export const HStack = styled(Box, {
-  ...flexStyles,
-});
+export const HStack = styled(Box, flexStyles);
 
-export const VStack = styled(Box, {
-  ...flexStyles,
+export const VStack = styled(Box, flexStyles, {
   flexDirection: 'column',
 });
 
